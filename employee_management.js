@@ -83,17 +83,46 @@ class Department  {
 }
 
 // test BELOW by removing //
-let itDept = new Department("IT");
+// let itDept = new Department("IT");
 
+// // create employees
+// let e1 = new Employee("Cole Crane", 85000, "Project Manager", "IT");
+// let e3 = new Employee("Jane Crowe", 120000, "Senior PM", "IT");
+// let m1 = new Manager("Sara Cryin", 125000, "Project Manager", "IT Security", 20500);
+
+// // add employees
+// itDept.addEmployee(e1);
+// itDept.addEmployee(e3);
+// itDept.addEmployee(m1);
+
+// // Output the total salary with bonuses
+// console.log("Total Salary with bonus:", itDept.calculateWithBonus());
+
+// TASK 5 Create and Manage Departments and Employees
+
+let itDept = new Department("IT");
+let hrDept = new Department("HR")
 // create employees
-let e1 = new Employee("Cole Crane", 85000, "Project Manager", "IT");
+let e5 = new Employee("Cole Crane", 85000, "Project Manager", "IT");
 let e3 = new Employee("Jane Crowe", 120000, "Senior PM", "IT");
-let m1 = new Manager("Sara Cryin", 125000, "Project Manager", "IT Security", 20500);
+let m4 = new Manager("Sara Cryin", 125000, "Project Manager", "IT", 20500);
+
+// new hr employees
+let e7 = new Employee("Zane Crane", 85000, "HR accountant", "HR");
+let e4 = new Employee("John Crowe", 130000, "Senior HR specialist", "HR");
+let m2 = new Manager("Ali Cryin", 125900, "HR Manager", "HR", 20500);
 
 // add employees
-itDept.addEmployee(e1);
+itDept.addEmployee(e5);
 itDept.addEmployee(e3);
-itDept.addEmployee(m1);
+itDept.addEmployee(m4);
+hrDept.addEmployee(e7);
+hrDept.addEmployee(e4);
+hrDept.addEmployee(m2);
 
-// Output the total salary with bonuses
+// calc total
+console.log("Total Salary:", itDept.getDepartmentSalary());
+console.log("Total Salary:", hrDept.getDepartmentSalary());
+//w bonus
 console.log("Total Salary with bonus:", itDept.calculateWithBonus());
+console.log("Total Salary with bonus:", hrDept.calculateWithBonus());
