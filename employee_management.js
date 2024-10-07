@@ -17,4 +17,21 @@ getDetails (){
 //let e1 = new Employee("Cole Crane", 85000, "Project Manager", "IT Security")
 //console.log(e1.getDetails()); // Check if class output is accuarate for COLE
 
-// Task 3 -
+// Task 3 - Create a Manager Class that Inherits from Employee
+// extending class
+class Manager extends Employee {
+    constructor (name, salary, position, department, bonus) // calling the first constructor
+    { 
+        super(name, salary, position, department)
+        this.bonus = bonus; // add bonus to managers
+    }
+    //override details
+    getDetails (){
+        return ` ${this.department}, ${this.position}, ${this.name}, ${this.salary}, Annual Bonus: ${this.bonus}`;
+    }// return details about employee
+
+}
+
+// test task 3 below by removing //
+//let m1 = new Manager("Sara Cryin", 125000, "Project Manager", "IT Security", 20500)
+//console.log(m1.getDetails()); // check output
